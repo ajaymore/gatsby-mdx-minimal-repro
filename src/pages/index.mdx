@@ -2,7 +2,9 @@ import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 
-export default ({ children, ...props }) => <Layout {...props}>{children}</Layout>
+export default ({ children, ...props }) => (
+  <Layout {...props}>{children}</Layout>
+)
 
 # Hi people
 
@@ -13,3 +15,15 @@ Now go build something great.
 <Link to="/page-2/">Go to page 2</Link>
 
 <Link to="/page-3-generated-url/">Go to page 3</Link>
+
+```javascript
+// In your gatsby-config.js
+plugins: [
+  {
+    resolve: `gatsby-transformer-remark`,
+    options: {
+      plugins: [`gatsby-remark-prismjs`],
+    },
+  },
+]
+```

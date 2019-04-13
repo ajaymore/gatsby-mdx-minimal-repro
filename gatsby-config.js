@@ -8,7 +8,16 @@ module.exports = {
       options: {
         mdPlugins: [],
         hastPlugins: [],
-        gatsbyRemarkPlugins: [],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: 'language-',
+              inlineCodeMarker: null,
+              aliases: {},
+            },
+          },
+        ],
       },
     },
     {
